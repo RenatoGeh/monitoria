@@ -19,7 +19,7 @@ int main(int argc, char* args[]) {
 	int i = (int)(args[1][0]-'0');
 
 	printf("Exercicio: %d\n", i);
-	(*exs[i])();
+	(*exs[i-1])();
 
 	return 0;
 }

@@ -1,7 +1,7 @@
 TYPE = -DDATA_TYPE=char
 
 CC = gcc
-CFLAGS = -ansi -pedantic -Wall -Wextra -Wno-unused-result $(TYPE) -g 
+CFLAGS = -ansi -pedantic -Wall -Wextra -Wno-unused-result -Wno-unused-parameter $(TYPE) -g 
 
 all: main.o utils.o
 	$(CC) $? $(CFLAGS) -o lista_3
