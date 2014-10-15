@@ -6,7 +6,7 @@ typedef enum boolean {
 	true
 } bool;
 
-typedef int DataType;
+typedef DATA_TYPE DataType;
 
 struct _struct_node {
 	void* value;

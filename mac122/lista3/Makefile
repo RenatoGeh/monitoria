@@ -1,7 +1,9 @@
-CC = gcc
-CFLAGS = -ansi -pedantic -Wall
+TYPE = -DDATA_TYPE=char
 
-all: utils.o main.o
+CC = gcc
+CFLAGS = -ansi -pedantic -Wall -Wextra -Wno-unused-result $(TYPE) -g 
+
+all: main.o utils.o
 	$(CC) $? $(CFLAGS) -o lista_3
 
 utils.o: utils.c utils.h
