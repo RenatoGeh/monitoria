@@ -15,7 +15,8 @@ void ex1(void) {
 		
 		putchar(' ');
 	}
-
+	
+	putchar('\n');
 	Stack_free(st);
 }
 

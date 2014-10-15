@@ -6,7 +6,7 @@ Node* Node_new(void) {
 	Node* this;
 
 	this = (Node*) malloc(sizeof(Node));
-	this->value = NULL;
+	this->value = (DataType*) malloc(sizeof(DataType));
 	this->next = NULL;
 
 	return this;
@@ -21,8 +21,8 @@ DataType Node_get(Node* this) {
 	return *((DataType*)this->value);	
 }
 
-DataType Node_set(Node* this, DataType val) {
-	return *((DataType*)this->value) = val;
+void Node_set(Node* this, DataType val) {
+	*((DataType*)this->value) = val;
 }
 
 Stack* Stack_new(void) {
@@ -72,8 +72,10 @@ DataType Stack_dequeue(Stack* this) {
 
 	ret_val = Node_get(this->head->next);
 	next = this->head->next->next;
-	free(this->head->next);
+	Node_free(this->head->next);
 	this->head->next = next;
+
+	--(this->size);
 
 	return ret_val;
 }

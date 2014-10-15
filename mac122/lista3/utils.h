@@ -21,7 +21,7 @@ void Node_free(Node* this);
 
 DataType Node_get(Node* this);
 
-DataType Node_set(Node* this, DataType val);
+void Node_set(Node* this, DataType val);
 
 struct _struct_stack {
 	Node* head;
