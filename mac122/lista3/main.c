@@ -5,13 +5,13 @@
 
 #define MAX_STRING_LENGTH 256
 
-#include "ex1.h"
-#include "ex2.h"
-#include "ex3.h"
-#include "ex4.h"
-#include "ex5.h"
-#include "ex6.h"
-#include "ex7.h"
+#include "exs/ex1.h"
+#include "exs/ex2.h"
+#include "exs/ex3.h"
+#include "exs/ex4.h"
+#include "exs/ex5.h"
+#include "exs/ex6.h"
+#include "exs/ex7.h"
 
 void (*exs[7])(void) = {ex1, ex2, ex3, ex4, ex5, ex6, ex7};
 
