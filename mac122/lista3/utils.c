@@ -80,3 +80,26 @@ DataType Stack_dequeue(Stack* this) {
 	return ret_val;
 }
 
+void Stack_clear(Stack* this) {
+	Node* it;
+	Node* next;
+
+	for(it=this->head->next;it!=NULL;it=next) {
+		next = it->next;
+		Node_free(it);
+	}
+
+	this->head->next = NULL;
+	this->size = 0;
+}
+
+void Stack_debug(Stack* this) {
+	Node* it;
+	int i=0;
+
+	for(it=this->head->next;it!=NULL;it=it->next) {
+		printf("[%d]=%d\n", i, (int)(*((char*)it->value)));
+		++i;
+	}
+}
+

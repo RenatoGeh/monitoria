@@ -38,6 +38,10 @@ bool Stack_isEmpty(Stack* this);
 
 void Stack_enqueue(Stack* this, DataType data);
 
+void Stack_clear(Stack* this);
+
+void Stack_debug(Stack* this);
+
 DataType Stack_dequeue(Stack* this);
 
 #endif

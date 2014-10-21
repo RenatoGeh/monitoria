@@ -1,6 +1,7 @@
 # Executables:
 *.exe
 *.out
+*.o
 
 # Vim stuff:
 *.swp
