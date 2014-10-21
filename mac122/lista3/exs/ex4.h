@@ -57,7 +57,7 @@ void ex4(void) {
 		Stack_clear(st);
 
 		/* Item B: */
-		printf("Item B: ");
+		/*printf("Item B: ");
 
 		for(i=0;str[i]!='\0';++i) {
 			c = str[i];
@@ -78,7 +78,7 @@ void ex4(void) {
 						++count;
 					}
 			}
-		}
+		}*/
 	}
 
 	Stack_free(st);
