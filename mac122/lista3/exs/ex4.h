@@ -15,8 +15,10 @@ void ex4(void) {
 
 	while(scanf("%s", str) != EOF) {
 		counts = 0;
-		
+
 		/* Item A: */
+		printf("Item A: ");
+		
 		for(i=0;str[i]!='\0';++i) {
 			c = str[i];
 
@@ -55,7 +57,28 @@ void ex4(void) {
 		Stack_clear(st);
 
 		/* Item B: */
-		
+		printf("Item B: ");
+
+		for(i=0;str[i]!='\0';++i) {
+			c = str[i];
+
+			if(c == '(' || c == '[') {
+				Stack_enqueue(st, c);
+				putchar(c);
+			} else {
+				if(Stack_isEmpty(st)) {
+
+				} else {
+					d = Stack_dequeue(st);
+					
+					if(c != get_pair(d)) {
+						putchar(get_pair(c));
+						putchar(c);
+						Stack_enqueue(st, d);
+						++count;
+					}
+			}
+		}
 	}
 
 	Stack_free(st);
