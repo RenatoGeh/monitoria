@@ -57,7 +57,8 @@ void ex4(void) {
 		Stack_clear(st);
 
 		/* Item B: */
-		/*printf("Item B: ");
+		counts = 0;
+		printf("Item B: ");
 
 		for(i=0;str[i]!='\0';++i) {
 			c = str[i];
@@ -67,7 +68,9 @@ void ex4(void) {
 				putchar(c);
 			} else {
 				if(Stack_isEmpty(st)) {
-
+					putchar(get_pair(c));
+					putchar(c);
+					++counts;
 				} else {
 					d = Stack_dequeue(st);
 					
@@ -75,10 +78,19 @@ void ex4(void) {
 						putchar(get_pair(c));
 						putchar(c);
 						Stack_enqueue(st, d);
-						++count;
-					}
+						++counts;
+					} else
+						putchar(c);
+				}
 			}
-		}*/
+		}
+
+		while(!Stack_isEmpty(st)) {
+			putchar(get_pair(Stack_dequeue(st)));
+			++counts;
+		}
+
+		printf(" -> %d correcoes.\n", counts);
 	}
 
 	Stack_free(st);

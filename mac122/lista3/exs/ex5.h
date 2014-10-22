@@ -9,7 +9,7 @@ void ex5(void) {
     iprefixa = 0;
     op = Stack_new();
     tam = strlen(word);
-    //varre a string ao contrario para calcular a notacao
+    /* varre a string ao contrario para calcular a notacao */
     for (i = tam - 1; i >= 0; i--) {
       if (word[i] == ')')
         Stack_enqueue(op, word[i]); 
@@ -38,11 +38,11 @@ void ex5(void) {
       }
       else prefixa[iprefixa++] = word[i];
     }
-    //coloca o restando dos operadores
+    /* coloca o restando dos operadores */
     while (!Stack_isEmpty(op)) 
       prefixa[iprefixa++] = Stack_dequeue(op);
 
-    //imprime a string ao contrario
+    /* imprime a string ao contrario */
     for (i = iprefixa - 1; i >= 0; i--)
       printf("%c", prefixa[i]);
     printf("\n");
